@@ -21,6 +21,9 @@ alias gP='git pull'
 alias gPu='git pull upstream'
 alias gPh='git pull hub'
 alias gPw='git pull web'
+function gcd {
+    git add -u && git commit -am"$1" && git push dev
+}
 
 # Mercurial shortcuts
 alias hga='hg add'
