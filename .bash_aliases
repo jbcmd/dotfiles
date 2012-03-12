@@ -5,7 +5,6 @@ alias aoeu='loadkeys /usr/share/kbd/keymaps/i386/qwerty/us.map.gz'
 alias fn='find -name'
 
 # Git shortcuts
-alias git=hub
 alias ga='git add .'
 alias gb='git branch'
 alias gs='git status'

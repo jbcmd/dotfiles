@@ -127,6 +127,7 @@ set tags+=~/.vim/tags/stdlibcpp
 
   " Make!
     map <f9> :make<CR> :!./a.out<CR>
+    map <f7> :!clojure %<CR>
 
   " Close buffers properly
     
