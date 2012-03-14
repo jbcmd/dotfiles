@@ -5,7 +5,7 @@ alias aoeu='loadkeys /usr/share/kbd/keymaps/i386/qwerty/us.map.gz'
 alias fn='find -name'
 function files {
   if [ -z "$1" ]; then
-    find . -type f | wc -l
+    find . -path ./.git -prune -o -print -path ./.hg -prune -o -print | wc -l
   else
     find $1 -type f | wc -l
   fi
