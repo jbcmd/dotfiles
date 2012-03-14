@@ -15,7 +15,7 @@ function files {
 alias ga='git add .'
 alias gb='git branch'
 alias gs='git status'
-function gc { git commit -am "$1"; }
+alias gc='git commit'
 # pushing
 alias gp='git push origin'
 alias gpu='git push upstream'
