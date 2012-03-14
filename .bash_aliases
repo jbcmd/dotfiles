@@ -3,12 +3,19 @@ alias asdf='loadkeys /usr/share/kbd/keymaps/i386/dvorak/dvorak.map.gz'
 #alias aoeu='loadkeys /usr/lib/kbd/keytables/us.map'
 alias aoeu='loadkeys /usr/share/kbd/keymaps/i386/qwerty/us.map.gz'
 alias fn='find -name'
+function files {
+  if [ -z "$1" ]; then
+    find . -type f | wc -l
+  else
+    find $1 -type f | wc -l
+  fi
+}
 
 # Git shortcuts
 alias ga='git add .'
 alias gb='git branch'
 alias gs='git status'
-alias gc='git commit -a'
+function gc { git commit -am "$1"; }
 # pushing
 alias gp='git push origin'
 alias gpu='git push upstream'
@@ -23,12 +30,15 @@ alias gPw='git pull web'
 function gcd {
     git add -u && git commit -am"$1" && git push dev
 }
+alias gd='git diff'
 
 # Mercurial shortcuts
 alias hga='hg add'
 alias hgb='hg branch'
 alias hgbs='hg branches'
-alias hgc='hg commit'
+function hgc {
+    hg commit -m"$1"
+}
 alias hgd='hg diff --color=always | less'
 alias hgf='hg pull'
 alias hgp='hg push'
