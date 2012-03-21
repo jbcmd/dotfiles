@@ -1,3 +1,4 @@
+call pathogen#infect()
 "=================================================================================
 " Configs from Coming Home to Vim
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/#why-i-switched-to-textmate
@@ -425,4 +426,11 @@ command! -nargs=? -complete=command Fs call Foldsearch(<q-args>)
 command! -nargs=? -complete=command Fold call Foldsearch(<q-args>)
 "command! R Fs \(^\s*\(\(def\|class\|module\)\s\)\)\|^\s*[#%"0-9]\{0,4\}\s*{\({{\|!!\)
 command! R Fs 
+
+" Rainbow parentheses
 runtime plugin/RainbowParenthsis.vim 
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
