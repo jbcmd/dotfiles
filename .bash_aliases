@@ -57,6 +57,15 @@ function hgdd {
 alias pd='pushd'
 alias Pd='popd'
 
+# Tmux shortcuts
+alias tl='tmux ls'
+function ta {
+    tmux attach -t"$1"
+}
+function tn {
+    tmux new -s"$1"
+}
+
 
 # Ruby Customization
 alias irb='irb --simple-prompt'
