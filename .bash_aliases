@@ -103,4 +103,5 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # use ssh instead of su so that I can use public key login :)
 alias 'sur'='ssh root@localhost'
 
-alias whereami='hostname'
+# Python cleanup
+alias rmpyc='find -name "*.pyc" | xargs -r rm'
