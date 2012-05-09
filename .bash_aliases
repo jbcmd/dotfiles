@@ -12,10 +12,13 @@ function files {
 }
 
 # Git shortcuts
-alias ga='git add .'
+alias git=hub
+alias ga='git add -p'
 alias gb='git branch'
 alias gs='git status'
 alias gc='git commit'
+alias gco='git checkout'
+alias gg='git log --graph --date-order --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 # pushing
 alias gp='git push origin'
 alias gpu='git push upstream'

@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/joe.chrysler/Projects/travellinghooks/hooks'
 let g:netrw_dirhist_2='/home/joe.chrysler/Projects/tapiness'
 let g:netrw_dirhist_3='/home/joe.chrysler/Projects/load-test/.git/hooks'
 let g:netrw_dirhist_4='/home/joe.chrysler/Dropbox/dotfiles/.vim'
 let g:netrw_dirhist_5='/home/joe.chrysler'
 let g:netrw_dirhist_6='/home/joe.chrysler/Dropbox/dotfiles'
+let g:netrw_dirhist_7='/home/joe.chrysler/Projects/Simon'
