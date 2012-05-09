@@ -61,9 +61,13 @@ alias pd='pushd'
 alias Pd='popd'
 
 # Tmux shortcuts
-alias ta='tmux attach -t'
 alias tl='tmux ls'
-alias tn='tmux new -s'
+function ta {
+    tmux attach -t"$1"
+}
+function tn {
+    tmux new -s"$1"
+}
 
 
 # Ruby Customization
