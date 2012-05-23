@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for conf in .bashrc .bash_aliases .vimrc .tmux.conf; do
+    mv ~/$conf ~/$conf.system
+    ln -s $conf ~/$conf
+done
+
