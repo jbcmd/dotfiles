@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Git shortcuts
+alias git=hub
+alias ga='git add -p'
+alias gb='git branch'
+alias gs='git status -sb'
+alias gc='git commit'
+alias gco='git checkout'
+alias gg='git log --graph --date-order --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+
+# pushing
+alias gp='git push origin'
+alias gpu='git push upstream'
+alias gph='git push hub'
+alias gpw='git push web'
+alias gpd='git push dev'
+
+# pulling
+alias gl='git pull'
+alias glu='git pull upstream'
+alias glh='git pull hub'
+alias glw='git pull web'
+alias gmv='git mv'
+function gcd {
+    git add -u && git commit -am"$1" && git push dev
+}
+alias gd='git diff'
+alias gdc='git diff --cached'

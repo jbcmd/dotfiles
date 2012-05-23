@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Mercurial shortcuts
+alias hga='hg add'
+alias hgb='hg branch'
+alias hgbs='hg branches'
+function hgc {
+    hg commit -m"$1"
+}
+alias hgd='hg diff --color=always | less'
+alias hgf='hg pull'
+alias hgp='hg push'
+alias hgs='hg status'
+alias hgu='hg update'
+alias hgi='hg in'
+alias hgo='hg out'
+alias hgpu='hg pull && hg update'
+alias hgl='hg log --color=always | less'
+alias hgg='hg glog --style=compact --color=always | less'
+function hgdd {
+  hg diff -r default > $HOME/diffs/`hg branch | sed -e 's/\//-/g'`.diff
+}
+

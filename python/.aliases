@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Python cleanup
+alias rmpyc='find -name "*.pyc" | xargs -r rm'

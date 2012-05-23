@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Ruby Customization
+alias irb='irb --simple-prompt'

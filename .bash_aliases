@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Aliases
 alias asdf='loadkeys /usr/share/kbd/keymaps/i386/dvorak/dvorak.map.gz'
 #alias aoeu='loadkeys /usr/lib/kbd/keytables/us.map'
@@ -11,73 +13,20 @@ function files {
   fi
 }
 
+source git/.aliases
+source mercurial/.aliases
+source tmux/.aliases
+source python/.aliases
+source ruby/.aliases
+
 # Django shortcuts
 alias djt='python manage.py test'
 alias djs='python manage.py runserver 0.0.0.0:11890'
-
-# Git shortcuts
-alias git=hub
-alias ga='git add -p'
-alias gb='git branch'
-alias gs='git status -sb'
-alias gc='git commit'
-alias gco='git checkout'
-alias gg='git log --graph --date-order --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
-# pushing
-alias gp='git push origin'
-alias gpu='git push upstream'
-alias gph='git push hub'
-alias gpw='git push web'
-alias gpd='git push dev'
-# pulling
-alias gl='git pull'
-alias glu='git pull upstream'
-alias glh='git pull hub'
-alias glw='git pull web'
-alias gmv='git mv'
-function gcd {
-    git add -u && git commit -am"$1" && git push dev
-}
-alias gd='git diff'
-alias gdc='git diff --cached'
-
-# Mercurial shortcuts
-alias hga='hg add'
-alias hgb='hg branch'
-alias hgbs='hg branches'
-function hgc {
-    hg commit -m"$1"
-}
-alias hgd='hg diff --color=always | less'
-alias hgf='hg pull'
-alias hgp='hg push'
-alias hgs='hg status'
-alias hgu='hg update'
-alias hgi='hg in'
-alias hgo='hg out'
-alias hgpu='hg pull && hg update'
-alias hgl='hg log --color=always | less'
-alias hgg='hg glog --style=compact --color=always | less'
-function hgdd {
-  hg diff -r default > $HOME/diffs/`hg branch | sed -e 's/\//-/g'`.diff
-}
 
 # Directory Movements
 alias pd='pushd'
 alias Pd='popd'
 
-# Tmux shortcuts
-alias tl='tmux ls'
-function ta {
-    tmux attach -t"$1"
-}
-function tn {
-    tmux new -s"$1"
-}
-
-
-# Ruby Customization
-alias irb='irb --simple-prompt'
 
 export HISTIGNORE="fg*"
 export HISTFILESIZE=99999
@@ -113,5 +62,3 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # use ssh instead of su so that I can use public key login :)
 alias 'sur'='ssh root@localhost'
 
-# Python cleanup
-alias rmpyc='find -name "*.pyc" | xargs -r rm'
