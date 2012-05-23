@@ -30,7 +30,7 @@ export PS1=">"
 #export PILOTPORT=/dev/pilot
 #export PILOTRATE=115200
 
-#test -s ~/.bash_aliases && . ~/.bash_aliases || true
+test -s ~/.all_aliases && . ~/.all_aliases || true
 
 
 SSH_ENV="$HOME/.ssh/environment"

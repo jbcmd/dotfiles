@@ -1,0 +1,6 @@
+source /home/joe.chrysler/Dropbox/dotfiles/mercurial/aliases
+source /home/joe.chrysler/Dropbox/dotfiles/tmux/aliases
+source /home/joe.chrysler/Dropbox/dotfiles/python/aliases
+source /home/joe.chrysler/Dropbox/dotfiles/git/aliases
+source /home/joe.chrysler/Dropbox/dotfiles/bash/aliases
+source /home/joe.chrysler/Dropbox/dotfiles/ruby/aliases
