@@ -66,3 +66,5 @@ if [ "$TERM" != "dumb" ]; then
 fi
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 rvm use 1.9.3
+
+export PATH=$PATH:~/bin
