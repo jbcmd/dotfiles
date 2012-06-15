@@ -13,15 +13,11 @@ function files {
   fi
 }
 
-source git/.aliases
-source mercurial/.aliases
-source tmux/.aliases
-source python/.aliases
-source ruby/.aliases
-
 # Django shortcuts
 alias djt='python manage.py test'
 alias djs='python manage.py runserver 0.0.0.0:11890'
+
+alias cf='mallow'
 
 # Directory Movements
 alias pd='pushd'
@@ -30,7 +26,6 @@ alias Pd='popd'
 
 export HISTIGNORE="fg*"
 export HISTFILESIZE=99999
-bind '"\C-f": "fg %-\n"'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

@@ -4,9 +4,6 @@
 alias hga='hg add'
 alias hgb='hg branch'
 alias hgbs='hg branches'
-function hgc {
-    hg commit -m"$1"
-}
 alias hgd='hg diff --color=always | less'
 alias hgf='hg pull'
 alias hgp='hg push'
@@ -20,4 +17,6 @@ alias hgg='hg glog --style=compact --color=always | less'
 function hgdd {
   hg diff -r default > $HOME/diffs/`hg branch | sed -e 's/\//-/g'`.diff
 }
-
+function hgc {
+    hg commit -m"$1"
+}

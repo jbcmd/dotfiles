@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 
 export currentdir=`pwd -P`
-for conf in bashrc aliases vimrc tmux.conf; do
-    echo "renaming ~/.$conf to ~/.$conf.system"
+for conf in bashrc all_aliases vimrc tmux.conf; do
+    echo "Renaming ~/.$conf to ~/.$conf.system..."
     mv ~/.$conf ~/.$conf.system
 
-    echo "linking ~/.$conf to $currentdir/$conf"
+    echo "Linking ~/.$conf to $currentdir/$conf..."
     ln -s $currentdir/$conf ~/.$conf
 done
 
 rm all_aliases
 for alias in `find $currentdir -name aliases`; do
+    echo "Sourcing $alias..."
     echo "source $alias" >> all_aliases
 done
 chmod +x all_aliases
+
+echo "Sourcing ~/.bashrc..."
+source ~/.bashrc
 
