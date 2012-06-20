@@ -7,7 +7,7 @@ alias gb='git branch'
 alias gs='git status -sb'
 alias gco='git checkout'
 alias gc='git commit -m"$1"'
-alias gg='git log --graph --date-order --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr by %C(blue)%an)%Creset' --abbrev-commit"
 
 # pushing
 alias gp='git push origin'
