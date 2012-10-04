@@ -13,9 +13,6 @@ function files {
   fi
 }
 
-# Django shortcuts
-alias djt='python manage.py test'
-alias djs='python manage.py runserver 0.0.0.0:11890'
 
 alias cf='mallow'
 

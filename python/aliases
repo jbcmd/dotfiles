@@ -2,3 +2,8 @@
 
 # Python cleanup
 alias rmpyc='find -name "*.pyc" | xargs -r rm'
+
+# Django shortcuts
+alias djt='python manage.py test --settings=settings.test'
+alias djts='python manage.py testserver --addrport 0.0.0.0:11890'
+alias djrs='python manage.py runserver 0.0.0.0:11890'
