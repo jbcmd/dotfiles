@@ -1,13 +1,17 @@
-#!/usr/bin/env bash
+# Hub
+alias git='hub'
 
 # Git shortcuts
-alias git=hub
 alias ga='git add -p'
 alias gb='git branch'
+alias gsa='git stash apply'
+alias gst='git stash'
 alias gs='git status -sb'
 alias gco='git checkout'
 alias gc='git commit -m"$1"'
 alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr by %C(blue)%an)%Creset' --abbrev-commit"
+alias god='git push origin --delete "$1"'
+alias git-clean="git branch -a --merged | cut -d'/' -f3 | grep -v master | grep -v origin | xargs git push origin --delete"
 
 # pushing
 alias gp='git push origin'
