@@ -57,6 +57,8 @@ fi
 
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && . "/usr/local/rvm/scripts/rvm" # This loads RVM into a shell session.
 
+
+export TERM=xterm-256color
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b`"
@@ -67,4 +69,5 @@ fi
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 rvm use 1.9.3
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:~/bin/toolbox
+export FIGNORE=$FIGNORE:.pyc
